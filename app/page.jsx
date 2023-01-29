@@ -7,6 +7,9 @@ https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
   const res = await data.json();
   return (
     <main className="main">
+      <h1 className="font-montserrat text-slate-100 text-7xl text-center mb-14">
+        Top Movies
+      </h1>
       <div className="grid gap-16 grid-cols-fluid px-500">
         {res.results.map((movie) => (
           <Movie
