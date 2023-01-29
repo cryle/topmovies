@@ -6,8 +6,8 @@ https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
 
   const res = await data.json();
   return (
-    <main>
-      <div className="grid gap-16 grid-cols-fluid">
+    <main className="main">
+      <div className="grid gap-16 grid-cols-fluid px-500">
         {res.results.map((movie) => (
           <Movie
             key={movie.id}
